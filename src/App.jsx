@@ -11,6 +11,8 @@ function App() {
     {/* <Counter/>
     <ProductTab/>
     <Ludo/> */}
+    <ProductTab/>
+    <Ludo/>
     <ToDo/>
    
     
