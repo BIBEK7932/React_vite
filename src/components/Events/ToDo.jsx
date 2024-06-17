@@ -1,21 +1,24 @@
 import { useState } from "react"
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ToDo(){
 
-    let [toDO,setTODO] = useState([])
+    let [toDO,setTODO] = useState([{task:"",id: uuidv4()}])
     let [newTask,setNewTask] = useState("")
     let toDos = ()=>{
-
-        setTODO((prev)=>{ return [...prev,newTask]})
+        if(newTask == "") { prompt("Enter Some Valid Task")}
+if(newTask != ""){setTODO((prev)=>{ return [...prev,{task:newTask,id:uuidv4()}]})}
+        
         setNewTask("")
          
     }
 
     return(<>
-    <label htmlFor="">Enter ToDo</label>
+    <label >Enter ToDo : </label>
     <br />
     
-    <input type="text"  placeholder="add task" value={newTask} onChange={(e)=>{setNewTask(e.target.value)
+    <input type="text"  placeholder="add task" value={newTask} onChange={(e)=>{
+        setNewTask(e.target.value)
         // console.log(newTask)
     }}/>
     <button onClick={toDos}>Submit</button>
@@ -25,7 +28,8 @@ export default function ToDo(){
     <ul>
         {
             toDO.map((t)=>{
-               return <li key={t}>{t}</li>
+                if(t.task != "")
+               return <li key={t.id}>{t.task}</li>
             })
         }
     </ul>
