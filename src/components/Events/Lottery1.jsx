@@ -1,6 +1,6 @@
 import { useState } from "react"
 import './Lottery.css'
-export default function Lottery() {
+export default function Lottery1() {
     let [lottery, setLottery] = useState({ num: null, isWin: false })
     let newTicket = () => {
         let number = Math.floor(Math.random() * 1000).toString()
@@ -17,11 +17,11 @@ export default function Lottery() {
 
     return (
         <>
-        <div className="lottery-container">
-                <h3 className="lottery-title">Lottery</h3>
-                {lottery.isWin ? <h3 className="lottery-message">Congratulations, you won!</h3> : null}
-                <p className="lottery-ticket">Lottery Ticket: {lottery.num !== null ? lottery.num : 'No Ticket Yet'}</p>
-                <button className="lottery-button" onClick={newTicket}>Get New Ticket</button>
+        <div className="lottery-container1">
+                <h3 className="lottery-title1">Lottery</h3>
+                {lottery.isWin ? <h3 className="lottery-message1">Congratulations, you won!</h3> : null}
+                <p className="lottery-ticket1">Lottery Ticket: {lottery.num !== null ? lottery.num : 'No Ticket Yet'}</p>
+                <button className="lottery-button1" onClick={newTicket}>Get New Ticket</button>
             </div>
         </>
     )

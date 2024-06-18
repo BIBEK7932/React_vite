@@ -3,21 +3,23 @@ import ProductTab from './components/Home/ProductTab'
 import Counter from './components/Events/Counter'
 import Ludo from './components/Events/Ludo'
 import ToDo from './components/Events/ToDo'
-import Lottery from './components/Events/Lottery'
+import Lottery1 from './components/Events/Lottery1'
+import Lottery from './components/NewLottery/Lottery'
 function App() {
-  
+ 
   return (
     <>
-    {/* <Counter/>
-    <ProductTab/>
-    <Ludo/> */}
-    <Lottery/>
+   
+    
+    <Lottery1 />
+    <Lottery  winningSum={10}/>
     <ToDo/>
     <ProductTab/>
     <Ludo/>
     
    
-    
+   
+   
     </>
   )
 }

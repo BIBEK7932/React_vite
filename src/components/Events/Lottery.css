@@ -1,4 +1,4 @@
-.lottery-container {
+.lottery-container1 {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -8,29 +8,30 @@
     background-color: #f9f9f9;
     text-align: center;
     font-family: Arial, sans-serif;
+    margin-bottom: 20px;
 }
 
-.lottery-title {
+.lottery-title1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
 
-.lottery-message {
+.lottery-message1 {
     font-size: 20px;
     font-weight: bold;
     color: #4CAF50;
     margin: 20px 0;
 }
 
-.lottery-ticket {
+.lottery-ticket1 {
     font-size: 18px;
     margin: 20px 0;
     color: #555;
 }
 
-.lottery-button {
+.lottery-button1 {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -41,6 +42,6 @@
     transition: background-color 0.3s ease;
 }
 
-.lottery-button:hover {
+.lottery-button1:hover {
     background-color: #45a049;
 }
