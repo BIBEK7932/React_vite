@@ -5,14 +5,21 @@ import Ludo from './components/Events/Ludo'
 import ToDo from './components/Events/ToDo'
 import Lottery1 from './components/Events/Lottery1'
 import Lottery from './components/NewLottery/Lottery'
+import { sum } from './components/NewLottery/helper'
+import Form from './components/Forms/Form'
+import Comment from './components/Forms/Comments'
 function App() {
- 
+  
+ let winningCondition = (ticket)=>{
+return sum(ticket)===21;
+ }
   return (
     <>
-   
+   {/* <Form/> */}
     
+    <Comment/>
     <Lottery1 />
-    <Lottery  winningSum={10}/>
+    <Lottery  winningCondition={winningCondition} n={4}/>
     <ToDo/>
     <ProductTab/>
     <Ludo/>

@@ -4,13 +4,14 @@ import Ticket from "./Ticket";
 import './Lottery.css';
 
 
-export default function Lottery({ n=3, winningSum = 15 }) {
+export default function Lottery({ n=3, winningCondition }) {
     let [ticket, setTicket] = useState(getTicket(n));
 
-    let isWinning = sum(ticket) === winningSum;
+    let isWinning = winningCondition(ticket)
 
     let buyTicket = () => {
         setTicket(getTicket(n));
+        
     };
 
     return (
