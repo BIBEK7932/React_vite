@@ -13,6 +13,7 @@ gap: 1rem;
 box-shadow: 0 0 20px rgba(0,0,0,.9);
 margin: 1rem;
 border-radius: .5rem;
+background-color: ghostwhite;
 }
 
 .block{
@@ -36,6 +37,10 @@ border-radius: .5rem;
     width: 14rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px rgba(0,0,0,.9);
+}
+.block:hover{
+    transform: translateY(-5px);
+  
 }
 .block button{
     padding: .5rem 2rem;
