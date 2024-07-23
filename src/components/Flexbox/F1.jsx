@@ -2,8 +2,10 @@ import React from "react";
 import './f1.css'
 
 export default function F1(){
+
+
     return(
-        <>
+        <div>
         <div className="container">
     <div className="block">
         <img src="../Images/krishna.jpeg" alt="krishna" className="img1" />
@@ -11,7 +13,7 @@ export default function F1(){
         <button>View</button>
     </div>
     <div className="block">
-        <img src="../Images/nature1.jpeg" alt="nature" className="img1" />
+        <img src="/Images/nature1.jpeg" alt="nature" className="img1" />
         <span>Nature</span>
         <button>View</button>
     </div>
@@ -48,6 +50,6 @@ export default function F1(){
     </div>
 </div>
 
-        </>
+        </div>
     )
 }

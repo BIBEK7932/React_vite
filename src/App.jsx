@@ -22,10 +22,10 @@ return sum(ticket)===21;
  }
   return (
     <>
-   
+    <F1/>
    <SearchBox/>
     
-    {/* <Comment/>
+  
      <Jocker/>
     <Counter2/>
    <FormikForms/>
@@ -33,8 +33,9 @@ return sum(ticket)===21;
     <Lottery  winningCondition={winningCondition} n={4}/>
     <ToDo/>
     <ProductTab/>
-    <Ludo/> */}
-    
+    <Ludo/>
+   
+    <Comment/>
    
    
    
