@@ -8,6 +8,13 @@ import Lottery from './components/NewLottery/Lottery'
 import { sum } from './components/NewLottery/helper'
 import Form from './components/Forms/Form'
 import Comment from './components/Forms/Comments'
+import FormikForms from './components/Forms/FormikForm'
+import Counter2 from './components/Events/Counter2'
+import Jocker from './components/Events/Jocker'
+
+import MuiButton from './components/MUI/MuiButton'
+import SearchBox from './components/MUI/Weather App/SearchBox'
+import F1 from './components/Flexbox/F1'
 function App() {
   
  let winningCondition = (ticket)=>{
@@ -15,14 +22,18 @@ return sum(ticket)===21;
  }
   return (
     <>
-   {/* <Form/> */}
+   
+   <SearchBox/>
     
-    <Comment/>
+    {/* <Comment/>
+     <Jocker/>
+    <Counter2/>
+   <FormikForms/>
     <Lottery1 />
     <Lottery  winningCondition={winningCondition} n={4}/>
     <ToDo/>
     <ProductTab/>
-    <Ludo/>
+    <Ludo/> */}
     
    
    
@@ -30,6 +41,8 @@ return sum(ticket)===21;
     </>
   )
 }
+
+
 
 export default App
 

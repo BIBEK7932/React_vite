@@ -1,9 +1,20 @@
 import { useState } from "react"
-
+import { Formik } from "formik";
 export default function Form(){
-let [formData,setFormData] = useState({
-    fullName: "",
-    userName: ""})
+// let [formData,setFormData] = useState({
+//     fullName: "",
+//     userName: "",
+// password:""})
+const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
 let handleInputChange = (event)=>{
     // let fieldName = event.target.name
@@ -20,7 +31,8 @@ let handleSubmit = (event) =>{
 event.preventDefault();
 setFormData({
     fullName: "",
-    userName: ""})
+    userName: "",
+    password:""})
 }
     return (
         <>
@@ -51,7 +63,7 @@ setFormData({
             <input 
             type="password" 
             placeholder="Enter Your Password" 
-            value={formData.userName} 
+            value={formData.password} 
             onChange={handleInputChange}
             id="password"
             name="password"
