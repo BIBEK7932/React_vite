@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './f1.css'
 
 export default function F1(){
-
+ useEffect(()=>{
+    document.querySelector('.close').addEventListener('click',()=>{
+        document.querySelector('.popup').style.display = "none";
+    })
+    document.querySelectorAll('.container .block button').forEach(button => {
+button.addEventListener('click', () => {
+    document.querySelector('.popup').style.display = "flex";
+    const block = button.closest('.block');
+    const imgSrc = block.querySelector('.img1').src;
+    const pra = block.querySelector('span').textContent
+    document.querySelector('.popup .block .img1').src = imgSrc;
+    document.querySelector('.popup .block span').textContent = pra;
+});
+});
+ },[])
 
     return(
         <div>
